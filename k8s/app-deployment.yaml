@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: market-regime-app
+  namespace: market-regime
+  labels:
+    app: market-regime-app
+    version: "0.1.0"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: market-regime-app
+  template:
+    metadata:
+      labels:
+        app: market-regime-app
+    spec:
+      containers:
+        - name: market-regime-app
+          # Jenkins CI updates this line automatically on every successful build
+          image: YOUR_DOCKERHUB_USERNAME/market-regime-app:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: APP_VERSION
+              value: "0.1.0"
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
