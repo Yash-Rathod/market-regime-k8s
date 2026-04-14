@@ -19,7 +19,7 @@ spec:
       containers:
         - name: market-regime-app
           # Jenkins CI updates this line automatically on every successful build
-          image: yrathod30/market-regime-app:becbd58
+          image: yrathod30/market-regime-app:7924ac9
           ports:
             - containerPort: 8000
           env:
