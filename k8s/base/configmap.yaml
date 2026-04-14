@@ -8,6 +8,6 @@ data:
   MODEL_PATH:          "/app/mlartifacts/model.pkl"
   ENCODER_PATH:        "/app/mlartifacts/label_encoder.pkl"
   MAPPING_PATH:        "/app/mlartifacts/class_mapping.json"
-  APP_VERSION:         "0.1.0"
+  APP_VERSION:         "0.2.0"
   ENVIRONMENT:         "production"
   TICKERS:             "^NSEI,^NSEBANK,RELIANCE.NS,INFY.NS,HDFCBANK.NS"
